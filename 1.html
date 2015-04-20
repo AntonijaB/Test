@@ -1,0 +1,65 @@
+﻿<html>
+	<head>
+	<title>Putni nalog</title>
+	
+	</head>
+	<body>
+	<h1>Putni nalog</h1>
+	
+	<p>Popunite naredna polja i dodajte kartice zaposlenika</p>
+
+
+<form method="POST" enctype="multipart/form-data">
+<p><b> Napiši datum i vrijeme početka i završetka putovanja </b></p>
+<input name="Datum i vrijeme početka i završetka putovanja" type="text" id="myInput" oninput="myFunction()" placeholder="Datum i vrijeme početka i završetka putovanja"required="required" />
+<p><b> Sredstvo prijevoza</b></p>
+<ul style="list-style-type:none">
+<li>Vlastiti automobil: <input type="checkbox" id="myCheck">
+<input name="Registracija vozila" type="text" id="myInput" oninput="myFunction()" placeholder="Registracija vozila" optional="optional" /> </li>
+<li>Privatno vozilo (suvozač): <input  type="checkbox" id="myCheck"></li>
+<li>Službeni automobil: <input name="" type="checkbox" id="myCheck"></li>
+<li>Javni prijevoz: <input name="" type="checkbox" id="myCheck"></li>
+</ul>
+
+<p><b> Razlog putovanja (opisati ukratko) </b></p>
+<input name="Razlog putovanja" type="text" id="myInput" oninput="myFunction()" placeholder="Razlog putovanja" required="required" />
+<p><b> Napiši relaciju putovanja </b></p>
+<input name="Relacija putovanja" type="text" id="myInput" oninput="myFunction()" placeholder="Relacija putovanja"required="required" />
+<p><b> Napiši broj projekta </b></p>
+<input name="Broj projekta" type="text" id="myInput" oninput="myFunction()" placeholder="Broj projekta" optional="optional" />
+<p><b> Ako je potrebno organizirati smještaj popunite slijedeće podatke? *</b></p>
+<ul style="list-style-type:none">
+<li>Datumi noćenja: <input type="text" id="myCheck"></li>
+<li>Ulazak u smještaj: <input type="text" id="myCheck"></li>
+<li>Izlazak iz smještaja: <input type="text" id="myCheck"></li>
+<li>Komentar: <input type="textarea" rows="4" cols="50" id="myCheck"></li>
+</ul>
+
+
+
+
+<p><b> Napiši broj osoba </b></p>
+<input name="Broj osoba" type="text" id="myInput" oninput="myFunction()" placeholder="Broj osoba"required="required" />
+<p><b> Napiši imena osoba </b></p>
+<input name="Imena osoba" type="text" id="myInput" oninput="myFunction()" placeholder="Imena osoba" required="required" />
+<p><b> Napiši broj studenata </b></p>
+<input name="Broj studenata" type="text" id="myInput" oninput="myFunction()" placeholder="Broj studenata" required="required" />
+<p><b> Učitaj kartice zaposlenika </b></p>
+<input type="file" name="datoteka" >
+<br>
+<p>*Pupuniti u slučaju potvrdnog odgovora!
+<br>
+<input type="submit" required="required" option="option" />
+
+<p id="demo"></p>
+<script>
+function myFunction() {
+	var x = document.getElementById("myInput").value;
+	document.getElementById("demo").innerHTML = "Ispis: " + x;
+}
+</script>
+
+</form>
+
+</body>
+</html>
